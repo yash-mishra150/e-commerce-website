@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Lemon&family=Norican&family=Poppins:ital,wght@0,300;0,400;0,700;0,800;0,900;1,200&family=Share+Tech&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Norican&family=Poppins:ital,wght@0,300;0,400;0,700;0,800;0,900;1,200&family=Share+Tech&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Nunito", sans-serif, poppins, share tech, Norican;
+  background: rgb(23, 23, 23);
+}
+
+.siteLogo {
+  font-family: Norican;
+  color: #fff;
+}
+
+.navbarProducts{
+  background: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+.menu3{
+  list-style: none;
+  padding: 0 100px;
+}
+
+.menu3 li{
+  display: block;
+  height: 100%;
+  margin-right: 30px;
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes anim2 {
+  0% {
+    opacity: 1;
+    transform: translateY(px);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  75% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Style 3: Just animate the :after element's width from 0 to 100% */
+
+.menu3 section li:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1.8px;
+  display: block;
+  top: 27px;
+  transition: all 0.3s ease;
+  bottom: 25%;
+}
+.menu3 section li:hover::after {
+  width: 100%;
+  height: 1.8px;
+  top: 27px;
+  background-color: #fff;
+}
+
+.circle:nth-child(1) {
+  @apply top-[-60px] left-[-60px];
+}
+.circle:nth-child(2) {
+  @apply bottom-[-60px] right-[-60px];
+  animation-name: move;
+}
+@keyframes move {
+  to {
+    transform: translate(-10px,-10px);
+  }
+  from{
+    transform: translate(10px,10px);
+  }
+}
+.Btn:hover .sign {
+  @apply w-[30%] duration-[0.3s] pl-5;
+}
+
+.Btn:hover .text {
+  @apply opacity-100 w-[70%] duration-[0.3s] pr-2.5;
+}

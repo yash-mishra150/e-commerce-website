@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card:hover .content {
+    @apply opacity-100 translate-y-0;
+  }
+  .card:hover .img-content {
+    @apply blur-[7px];
+    scale: 3.5;
+    rotate: 30deg;
+  }
+  .card:hover .img-content svg {
+    @apply fill-transparent;
+  }
+  .card .img-content {
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    transition: scale 0.6s, rotate 0.6s, filter 1s;
+    
+  }
+  .card-container::before {
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+  }
